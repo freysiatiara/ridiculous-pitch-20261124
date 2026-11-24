@@ -25,6 +25,8 @@ def output_path():
 
 
 def main():
+    if not 1 <= len(ENTRY_TEXT) <= 200:
+        raise ValueError("entry must be 1 to 200 characters")
     path = output_path()
     parent = os.path.dirname(path)
     if parent:
